@@ -1,9 +1,17 @@
 import React from 'react';
-import { Button, Card, Container, Row } from 'react-bootstrap';
+import { 
+  Button,
+  Card,
+  Container,
+  Row,
+  Stack
+} from 'react-bootstrap';
 
-import logo from '../image/Marca.jpg';
-import whatsapp from '../image/icons8-whatsapp-48.png';
-import instagram from '../image/instagram_ig_logo_icon_181651.png';
+import logo from '../image/logo.png';
+import whatsapp from '../image/icon-whatsapp.png';
+import instagram from '../image/icon-instagram.png';
+
+import ENUM from '../utilities/enum';
 
 import './Home.scss';
 
@@ -13,56 +21,55 @@ function Home() {
       <Row>
         <Card className="text-center" >
           <Card.Img variant="top" src={logo} />
-          {/* <Image src={logo} roundedCircle /> */}
           <Card.Body>
             <Card.Title><h1>Pegada Baby</h1></Card.Title>
             <Card.Text>
               <h3>Aqui calçamos sua criança com amor e estilo á um preço justo!</h3>
             </Card.Text>
-            <div className="d-grid gap-2">
-              <Button variant="primary" size="lg" href="https://www.pegadababy.com.br/">
+            <Stack gap={3} className="col-md-7 mx-auto">
+              <Button variant="primary" size="lg" href={ENUM.url.site}>
                 Site
               </Button>
-              <Button variant="primary" size="lg" href="https://shopee.com.br/pegada_baby">
+              <Button variant="primary" size="lg" href={ENUM.url.shopee}>
                 Shopee
               </Button>
-              <Button variant="primary" size="lg" href="https://pegadababy.mercadoshops.com.br/">
+              <Button variant="primary" size="lg" href={ENUM.url.mercadoLivre}>
                 Mercado Livre
               </Button>
-              <Button variant="primary" size="lg" href="https://www.americanas.com.br/lojista/pegada-baby">
+              <Button variant="primary" size="lg" href={ENUM.url.lojasAmericanas}>
                 Lojas Americanas
               </Button>
-              <Button variant="primary" size="lg" href="https://www.magazineluiza.com.br/lojista/pegadababyme/">
+              <Button variant="primary" size="lg" href={ENUM.url.magazineLuiza}>
                 Magazine Luiza
               </Button>
-              <Button variant="primary" size="lg" href="https://www.pontofrio.com.br/c/pegada-baby/?filtro=m159472">
-                Pontofrio
+              <Button variant="primary" size="lg" href={ENUM.url.pontoFrio}>
+                Ponto Frio
               </Button>
-              <Button variant="primary" size="lg" href="https://www.shoptime.com.br/lojista/pegada-baby">
+              <Button variant="primary" size="lg" href={ENUM.url.shopTime}>
                 Shoptime
               </Button>
-              <Button variant="primary" size="lg" href="https://www.casasbahia.com.br/c/pegada-baby/?filtro=m159472">
+              <Button variant="primary" size="lg" href={ENUM.url.casasBahia}>
                 Casas Bahia
               </Button>
-            </div>
+            </Stack>
           </Card.Body>
           <div>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://api.whatsapp.com/send?phone=5531971720713">
+              href={ENUM.url.whatsApp}>
               <img src={whatsapp} alt='whatsapp' />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.instagram.com/pegada_baby/">
+              href={ENUM.url.instagram}>
               <img src={instagram} alt='instagram' />
             </a>
           </div>
         </Card>
       </Row>
-    </Container>
+    </Container >
   );
 }
 

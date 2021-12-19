@@ -1,1 +1,22 @@
 @import "~bootstrap/scss/bootstrap";
+
+.card {
+  background-color: #ffe2ed;
+  padding: 5px;
+  
+  .card-img-top {
+    width: 200px;
+    align-self: center;
+    border-radius: 50% !important;
+    height: 150px;
+  }
+
+  .btn-lg { 
+    background-color: #428ecc;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+}
