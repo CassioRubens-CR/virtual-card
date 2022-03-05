@@ -6,13 +6,10 @@ import {
   Row,
   Stack
 } from 'react-bootstrap';
-
 import logo from '../image/logo.png';
 import whatsapp from '../image/icon-whatsapp.png';
 import instagram from '../image/icon-instagram.png';
-
 import ENUM from '../utilities/enum';
-
 import './Home.scss';
 
 function Home() {
@@ -24,7 +21,7 @@ function Home() {
           <Card.Body>
             <Card.Title><h1>Pegada Baby</h1></Card.Title>
             <Card.Text>
-              <h3>Aqui calçamos sua criança com amor e estilo á um preço justo!</h3>
+              Aqui calçamos sua criança com amor e estilo á um preço justo!
             </Card.Text>
             <Stack gap={3} className="col-md-7 mx-auto">
               <Button variant="primary" size="lg" href={ENUM.url.site}>
